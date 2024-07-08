@@ -1,0 +1,27 @@
+---
+layout: post
+title:  "Linkedin"
+date:   2024-03-19 21:44:00 +0200
+categories: Sourcery.info update
+---
+Hi all
+
+There are a few new people on the list, so to update you: this is a weekly(ish) update of Sourcery.info development progress for those involved or following the project. 
+
+I missed last week’s missive as there wasn’t much to report, apart from banging my head against technology that definitely didn’t work the way it claimed to on the tin. For all the billions poured into AI right now, I often hit some glaring gaps in the libraries that everyone is meant to be using. In the spirit of open source, we will be committing changes to bridge some of those gaps in the software libraries.
+
+Talking of open source, I took the tentative step of publishing the front-end portion of Sourcery on Github here: https://github.com/Sourcery-info/sourcery-frontend (I do not suggest you try and run it at this point unless you’re prepared for disappointment.) 
+
+It’s cool that Soucery.info has a home on Github though, which is part of the broader community infrastructure. To that end, I’ll be launching a Slack channel later this week, so please expect invites in your email. 
+
+On to actual chatting progress: 
+- I indexed about 2,600 pages from one of your submissions and chatted to them;
+- I got some really interesting results, including a description of how to launder money (not sure it’s meant to do that);
+- The app is still prone to crashing, which I’ll address next week;
+- Some documents that you guys get are really f*’d! There was one PDF that I worked on for hours to extract anything, and it still looked like it had been through a shredder. I’m going to have to give some thought on how to deal with these cases.
+- I had some hilarious hallucinations. See attached screenshot. 
+Finally, I reached out on LinkedIn for additional help on my many projects, and got a great response. I’m still processing the replies, but at least three brilliant developers are keen to work on this and other stuff. Hopefully we can all meet on Slack later this week.
+
+![Image]({{ site.baseurl }}/assets/images/eskom-chat.png)
+
+Until next week, have a great one!

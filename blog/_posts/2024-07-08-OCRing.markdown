@@ -1,0 +1,27 @@
+---
+layout: post
+title:  "A Long-Overdue Update"
+date:   2024-07-08 15:20:36 +0200
+categories: Sourcery.info update
+---
+Hi all! 
+
+It's been ages since my last update, and I apologise. I got busy with the South African elections, and haven't quite recovered since then. But I have quietly been working on Sourcery.info, and I've vaulted a bunch of the little and large hurdles. 
+
+My primary focus has been on finding a way to reliably deal with the most problematic of PDFs. _(Thanks K for providing some almost-impossible-to-grok specimens.)_ The weeks' worth of work dedicated to this pursuit is worth a whole blog post, but to quickly summarise: The most reliable method is to change the PDFs into images, then use AI to OCR them, and change it back into text. 
+
+Finding the right software and models to achieve his has been time-consuming, and involved a lot of spreadsheets, tests and times, but I've honed in on trusty old ImageMagick to convert to image, and EasyOCR for the OCR part. There are some very promising new multimodal OCR models coming out that did very well in some of the tests, but EasyOCR is both light on resources and performs the best overall across a number of tricky documents. 
+
+By far the best OCR today is Anthropic's, but it requires uploading to the cloud, and I'm hearing reports that it's starting to reject legally problematic documents, which rule it out for Sourcery.info's use cases. If this isn't an issue for you, I can recommend it.
+
+I'm running a simple chunking model for now, but it often misses what I'm asking it. I'm in the middle of a different chunking and vectorizing project on >100,000 documents, and I'm learning from that experience, which I'll bring into Sourcery. 
+
+I've also bought a ~€1,200 PC to test Sourcery.info on for organisations that will have budget to dedicate to such a system. It performs brilliantly, and I can load much smarter models on it. I'm still determined to have Sourcery.info work okay on mid-range laptops, and really sing on dedicated (but still relatively cheap) hardware. 
+
+The big jobs left are to implement the new OCR system, fix up the chunking method, and give the system memory of past conversations. The end is kinda in sight, if you squint a bit.
+
+I've also been considering how best to share all of this information, plus some blog posts on AI systems development in general. So I've started a blog! You can find it at [https://sourcery.info/blog](https://sourcery.info/blog). I'll be posting updates there, and I'll be sharing some of the more interesting documents that I've been working on.
+
+I'm also sorting out the final details for an email list, and I'll send you invites to subscribe yourself soon.
+
+Of course I also need to get on top of the Slack channel and start pushing things out on LinkedIn too, but I tend to spend all my time doing development rather than admin at this point. But I will be better with updates, I promise!

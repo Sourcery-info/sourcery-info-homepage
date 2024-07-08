@@ -1,0 +1,23 @@
+---
+layout: post
+title:  "Easter"
+date:   2024-03-25 12:49:00 +0200
+categories: Sourcery.info update
+---
+Hi all
+
+Welcome to the weekly Sourcery.info development update. I heard a rumour that next week is Easter, so I’ll have to sneak an easter egg into the product to mark the occasion.
+
+Development is trundling on, and I feel like I made some progress this week, finally working on the user interface to make it less ugly (see screenshot, colours still undecided, feedback welcome), and starting to work on the pipeline that will ensure that documents that you stick in one end come out useable, safe, and intelligent on the other end. 
+
+Exciting news: After reaching out on LinkedIn, I we should be getting new developers on board! I’ll introduce them as they’re brought into the fold. It does mean I need to get more serious about project management, processes, and development best practices, which isn’t a bad thing at all. 
+
+Thanks to everyone who sent documents, even those who sent almost-unreadable documents. Keep them coming please! As a reminder, I’m looking for documents that you deal with every day and need to glean insight. Nothing secret or privileged at this point please. Court transcripts are proving fun!
+
+I’ve also been experimenting with the other products on the market. There’s a new product that does a lot of what I’m hoping to achieve, called [AnythingLLM](https://useanything.com/download). It’s aimed at a more technical user, as you have to either run your own LLM or use a commercially-available model, but it’s decent and might fill the gap if you need something while you wait for Sourcery.info. 
+
+I also compared Sourcery.info to a few cloud services, diving deep into [Cohere](https://cohere.com/). It’s pretty good when it works, but it seemed pretty flaky when I started to push it, and eventually stopped working altogether.
+
+I also experimented with [GPT-4](https://chat.openai.com/) with single documents, and it still is by far the best service that I’ve tried. If you’re working on a single document and privacy isn’t an issue, this is what I would recommend at the moment. Just remember that Sam Altman is hoovering up all your data and feeding it to his AI monsters, with one of them (Q*) rumoured to have [achieved artificial general intelligence](https://www.youtube.com/watch?v=9gdiqTJNeEc). 
+
+Until next week! (Possibly delayed by holidays.)

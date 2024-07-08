@@ -1,0 +1,21 @@
+---
+layout: post
+title:  "Moar Documents"
+date:   2024-02-26 21:12:00 +0200
+categories: Sourcery.info update
+---
+Hi all
+
+Thanks to all you peeps who sent me sample documents. I need more! This is your chance to influence the direction of a product that I’m hoping will be transformative to your work, but it only will be if it meets your needs. I don’t know what those needs are. 
+
+I guess now is a good time to discuss how much this product will cost you guys. If you have the hardware to run it, and it should run on a decent, modern machine (and run very well on the machines coming out this year), then it will be free for all journalists. As part of the first cohort, support and tailoring it to your needs is also free. If I were to build this for your organisation on commission, it’ll cost around €30,000, or about ZAR600,000. 
+
+I’m mentioning this now because I really want you guys to take advantage of the opportunity, get me to do the work for free while you can, and make sure you get a product out at the other end that transforms your work and makes it much easier to do your job. 
+
+Another ask I have is if you have some colleagues or peers that I should be reaching out to who would also like to be involved at this early stage, please let me know. 
+
+Software-dev wise, today was UI day (not my favourite thing) followed by starting on the websocket layer between Sourcery.info and the LLM framework I’m using, Ollama. Progress feels slow at this point, but I think I’m just impatient to start chatting to this thing. 
+
+Google released a new LLM, Gemma, and I’m impressed by the speed, even on my old MBP. It’s totally acceptable for chatting. I need to test it with RAG this week, but it offers a great alternative to Lllama2. Currently Sourcery supports seven LLM models, although I’m hoping this will all be invisible to the end-user (unless they want to experiment). It will automatically select the best model for your needs and environment. 
+
+Have a great week everyone!
