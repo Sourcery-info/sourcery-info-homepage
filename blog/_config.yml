@@ -21,17 +21,16 @@
 title: Sourcery.info
 email: jason@10layer.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Sourcery.info lets investigative journalists interview their own documents securely and privately with the power of large language models.
+    Sourcery.info lets investigative journalists interview their own documents securely and privately with the power of large language models.
 baseurl: "/blog" # the subpath of your site, e.g. /blog
-url: "https://sourcery.info" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://www.sourcery.info" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: jekyllrb
-github_username:  j-norwood-young
+github_username: j-norwood-young
 
 # Build settings
 theme: minima
 plugins:
-  - jekyll-feed
-
+    - jekyll-feed
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
