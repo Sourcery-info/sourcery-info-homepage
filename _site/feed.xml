@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-07-08T17:50:33+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Sourcery.info</title><subtitle>Sourcery.info lets investigative journalists interview their own documents securely and privately with the power of large language models.</subtitle><entry><title type="html">A Long-Overdue Update</title><link href="http://localhost:4000/sourcery.info/update/2024/07/08/OCRing.html" rel="alternate" type="text/html" title="A Long-Overdue Update" /><published>2024-07-08T15:20:36+02:00</published><updated>2024-07-08T15:20:36+02:00</updated><id>http://localhost:4000/sourcery.info/update/2024/07/08/OCRing</id><content type="html" xml:base="http://localhost:4000/sourcery.info/update/2024/07/08/OCRing.html"><![CDATA[<p>Hi all!</p>
+
+<p>It’s been ages since my last update, and I apologise. I got busy with the South African elections, and haven’t quite recovered since then. But I have quietly been working on Sourcery.info, and I’ve vaulted a bunch of the little and large hurdles.</p>
+
+<p>My primary focus has been on finding a way to reliably deal with the most problematic of PDFs. <em>(Thanks K for providing some almost-impossible-to-grok specimens.)</em> The weeks’ worth of work dedicated to this pursuit is worth a whole blog post, but to quickly summarise: The most reliable method is to change the PDFs into images, then use AI to OCR them, and change it back into text.</p>
+
+<p>Finding the right software and models to achieve his has been time-consuming, and involved a lot of spreadsheets, tests and times, but I’ve honed in on trusty old ImageMagick to convert to image, and EasyOCR for the OCR part. There are some very promising new multimodal OCR models coming out that did very well in some of the tests, but EasyOCR is both light on resources and performs the best overall across a number of tricky documents.</p>
+
+<p>By far the best OCR today is Anthropic’s, but it requires uploading to the cloud, and I’m hearing reports that it’s starting to reject legally problematic documents, which rule it out for Sourcery.info’s use cases. If this isn’t an issue for you, I can recommend it.</p>
+
+<p>I’m running a simple chunking model for now, but it often misses what I’m asking it. I’m in the middle of a different chunking and vectorizing project on &gt;100,000 documents, and I’m learning from that experience, which I’ll bring into Sourcery.</p>
+
+<p>I’ve also bought a ~€1,200 PC to test Sourcery.info on for organisations that will have budget to dedicate to such a system. It performs brilliantly, and I can load much smarter models on it. I’m still determined to have Sourcery.info work okay on mid-range laptops, and really sing on dedicated (but still relatively cheap) hardware.</p>
+
+<p>The big jobs left are to implement the new OCR system, fix up the chunking method, and give the system memory of past conversations. The end is kinda in sight, if you squint a bit.</p>
+
+<p>I’ve also been considering how best to share all of this information, plus some blog posts on AI systems development in general. So I’ve started a blog! You can find it at <a href="https://sourcery.info/blog">https://sourcery.info/blog</a>. I’ll be posting updates there, and I’ll be sharing some of the more interesting documents that I’ve been working on.</p>
+
+<p>I’m also sorting out the final details for an email list, and I’ll send you invites to subscribe yourself soon.</p>
+
+<p>Of course I also need to get on top of the Slack channel and start pushing things out on LinkedIn too, but I tend to spend all my time doing development rather than admin at this point. But I will be better with updates, I promise!</p>]]></content><author><name></name></author><category term="Sourcery.info" /><category term="update" /><summary type="html"><![CDATA[Hi all!]]></summary></entry><entry><title type="html">Easter</title><link href="http://localhost:4000/sourcery.info/update/2024/03/25/easter.html" rel="alternate" type="text/html" title="Easter" /><published>2024-03-25T11:49:00+01:00</published><updated>2024-03-25T11:49:00+01:00</updated><id>http://localhost:4000/sourcery.info/update/2024/03/25/easter</id><content type="html" xml:base="http://localhost:4000/sourcery.info/update/2024/03/25/easter.html"><![CDATA[<p>Hi all</p>
+
+<p>Welcome to the weekly Sourcery.info development update. I heard a rumour that next week is Easter, so I’ll have to sneak an easter egg into the product to mark the occasion.</p>
+
+<p>Development is trundling on, and I feel like I made some progress this week, finally working on the user interface to make it less ugly (see screenshot, colours still undecided, feedback welcome), and starting to work on the pipeline that will ensure that documents that you stick in one end come out useable, safe, and intelligent on the other end.</p>
+
+<p>Exciting news: After reaching out on LinkedIn, I we should be getting new developers on board! I’ll introduce them as they’re brought into the fold. It does mean I need to get more serious about project management, processes, and development best practices, which isn’t a bad thing at all.</p>
+
+<p>Thanks to everyone who sent documents, even those who sent almost-unreadable documents. Keep them coming please! As a reminder, I’m looking for documents that you deal with every day and need to glean insight. Nothing secret or privileged at this point please. Court transcripts are proving fun!</p>
+
+<p>I’ve also been experimenting with the other products on the market. There’s a new product that does a lot of what I’m hoping to achieve, called <a href="https://useanything.com/download">AnythingLLM</a>. It’s aimed at a more technical user, as you have to either run your own LLM or use a commercially-available model, but it’s decent and might fill the gap if you need something while you wait for Sourcery.info.</p>
+
+<p>I also compared Sourcery.info to a few cloud services, diving deep into <a href="https://cohere.com/">Cohere</a>. It’s pretty good when it works, but it seemed pretty flaky when I started to push it, and eventually stopped working altogether.</p>
+
+<p>I also experimented with <a href="https://chat.openai.com/">GPT-4</a> with single documents, and it still is by far the best service that I’ve tried. If you’re working on a single document and privacy isn’t an issue, this is what I would recommend at the moment. Just remember that Sam Altman is hoovering up all your data and feeding it to his AI monsters, with one of them (Q*) rumoured to have <a href="https://www.youtube.com/watch?v=9gdiqTJNeEc">achieved artificial general intelligence</a>.</p>
+
+<p>Until next week! (Possibly delayed by holidays.)</p>]]></content><author><name></name></author><category term="Sourcery.info" /><category term="update" /><summary type="html"><![CDATA[Hi all]]></summary></entry><entry><title type="html">Linkedin</title><link href="http://localhost:4000/sourcery.info/update/2024/03/19/linkedin.html" rel="alternate" type="text/html" title="Linkedin" /><published>2024-03-19T20:44:00+01:00</published><updated>2024-03-19T20:44:00+01:00</updated><id>http://localhost:4000/sourcery.info/update/2024/03/19/linkedin</id><content type="html" xml:base="http://localhost:4000/sourcery.info/update/2024/03/19/linkedin.html"><![CDATA[<p>Hi all</p>
+
+<p>There are a few new people on the list, so to update you: this is a weekly(ish) update of Sourcery.info development progress for those involved or following the project.</p>
+
+<p>I missed last week’s missive as there wasn’t much to report, apart from banging my head against technology that definitely didn’t work the way it claimed to on the tin. For all the billions poured into AI right now, I often hit some glaring gaps in the libraries that everyone is meant to be using. In the spirit of open source, we will be committing changes to bridge some of those gaps in the software libraries.</p>
+
+<p>Talking of open source, I took the tentative step of publishing the front-end portion of Sourcery on Github here: https://github.com/Sourcery-info/sourcery-frontend (I do not suggest you try and run it at this point unless you’re prepared for disappointment.)</p>
+
+<p>It’s cool that Soucery.info has a home on Github though, which is part of the broader community infrastructure. To that end, I’ll be launching a Slack channel later this week, so please expect invites in your email.</p>
+
+<p>On to actual chatting progress:</p>
+<ul>
+  <li>I indexed about 2,600 pages from one of your submissions and chatted to them;</li>
+  <li>I got some really interesting results, including a description of how to launder money (not sure it’s meant to do that);</li>
+  <li>The app is still prone to crashing, which I’ll address next week;</li>
+  <li>Some documents that you guys get are really f*’d! There was one PDF that I worked on for hours to extract anything, and it still looked like it had been through a shredder. I’m going to have to give some thought on how to deal with these cases.</li>
+  <li>I had some hilarious hallucinations. See attached screenshot. 
+Finally, I reached out on LinkedIn for additional help on my many projects, and got a great response. I’m still processing the replies, but at least three brilliant developers are keen to work on this and other stuff. Hopefully we can all meet on Slack later this week.</li>
+</ul>
+
+<p><img src="/assets/images/eskom-chat.png" alt="Image" /></p>
+
+<p>Until next week, have a great one!</p>]]></content><author><name></name></author><category term="Sourcery.info" /><category term="update" /><summary type="html"><![CDATA[Hi all]]></summary></entry><entry><title type="html">First Chat</title><link href="http://localhost:4000/sourcery.info/update/2024/03/04/first-chat.html" rel="alternate" type="text/html" title="First Chat" /><published>2024-03-04T20:44:00+01:00</published><updated>2024-03-04T20:44:00+01:00</updated><id>http://localhost:4000/sourcery.info/update/2024/03/04/first-chat</id><content type="html" xml:base="http://localhost:4000/sourcery.info/update/2024/03/04/first-chat.html"><![CDATA[<p>Hi all</p>
+
+<p>I’m going to keep it short today: I had my first chat with my own documents, through my own interface. It’s slow. It’s clunky. It crashes a lot. But it really is a big leap forward and I’m really happy with it. (See attached pic showing off that it is an actual conversation - it remembers what you’re talking about.)</p>
+
+<p>Next I’m working on speed and file management. In a few weeks we should have some videos which I’m hoping will make you lot excited.</p>
+
+<p>Once again, please send me docs for testing and if there’s anyone else you think would like to be involved, please put us in touch.</p>
+
+<p>Have a good week!</p>
+
+<p><img src="/assets/images/first-chat.png" alt="Image" /></p>]]></content><author><name></name></author><category term="Sourcery.info" /><category term="update" /><summary type="html"><![CDATA[Hi all]]></summary></entry><entry><title type="html">Moar Documents</title><link href="http://localhost:4000/sourcery.info/update/2024/02/26/docs.html" rel="alternate" type="text/html" title="Moar Documents" /><published>2024-02-26T20:12:00+01:00</published><updated>2024-02-26T20:12:00+01:00</updated><id>http://localhost:4000/sourcery.info/update/2024/02/26/docs</id><content type="html" xml:base="http://localhost:4000/sourcery.info/update/2024/02/26/docs.html"><![CDATA[<p>Hi all</p>
+
+<p>Thanks to all you peeps who sent me sample documents. I need more! This is your chance to influence the direction of a product that I’m hoping will be transformative to your work, but it only will be if it meets your needs. I don’t know what those needs are.</p>
+
+<p>I guess now is a good time to discuss how much this product will cost you guys. If you have the hardware to run it, and it should run on a decent, modern machine (and run very well on the machines coming out this year), then it will be free for all journalists. As part of the first cohort, support and tailoring it to your needs is also free. If I were to build this for your organisation on commission, it’ll cost around €30,000, or about ZAR600,000.</p>
+
+<p>I’m mentioning this now because I really want you guys to take advantage of the opportunity, get me to do the work for free while you can, and make sure you get a product out at the other end that transforms your work and makes it much easier to do your job.</p>
+
+<p>Another ask I have is if you have some colleagues or peers that I should be reaching out to who would also like to be involved at this early stage, please let me know.</p>
+
+<p>Software-dev wise, today was UI day (not my favourite thing) followed by starting on the websocket layer between Sourcery.info and the LLM framework I’m using, Ollama. Progress feels slow at this point, but I think I’m just impatient to start chatting to this thing.</p>
+
+<p>Google released a new LLM, Gemma, and I’m impressed by the speed, even on my old MBP. It’s totally acceptable for chatting. I need to test it with RAG this week, but it offers a great alternative to Lllama2. Currently Sourcery supports seven LLM models, although I’m hoping this will all be invisible to the end-user (unless they want to experiment). It will automatically select the best model for your needs and environment.</p>
+
+<p>Have a great week everyone!</p>]]></content><author><name></name></author><category term="Sourcery.info" /><category term="update" /><summary type="html"><![CDATA[Hi all]]></summary></entry><entry><title type="html">NVidia Competition</title><link href="http://localhost:4000/sourcery.info/update/2024/02/19/nvidia-competition.html" rel="alternate" type="text/html" title="NVidia Competition" /><published>2024-02-19T19:36:00+01:00</published><updated>2024-02-19T19:36:00+01:00</updated><id>http://localhost:4000/sourcery.info/update/2024/02/19/nvidia-competition</id><content type="html" xml:base="http://localhost:4000/sourcery.info/update/2024/02/19/nvidia-competition.html"><![CDATA[<p>It’s Monday, so time for an update on Sourcery.info. I didn’t get quite as much done as I was hoping since the last update, having gotten quite involved in the plumbing. Working out the little details, like what happens when you upload a two files with the same name, or how to ensure that we process everything in an orderly fashion with queues - it’s these problems that you don’t know to think about before you start building, and it’s what makes software development always so wildly inaccurate with its budgets and time measurements. You simply don’t know what you don’t know. (Until you smash your head against it in the dark.)</p>
+
+<p>One major development to report is Nvidia, the company that makes the graphics cards that have become so valuable to bitcoin miners and AI, has released <a href="https://www.theverge.com/2024/2/13/24071645/nvidia-ai-chatbot-chat-with-rtx-tech-demo-hands-on">“Chat with RTX”</a>, which does similar things to what I’m building. I’m not too worried, since the use-case is somewhat different, but I’m definitely going to be stealing ideas from them. Also, I don’t see why a developer working part-time for free on a project can’t take on a company that’s just passed Amazon and Google (Alphabet) in market cap.</p>
+
+<p>I asked you last week about what computers you have access to, what budgets you could potentially muster for an airgapped machine, and how much you work with very sensitive info. Thanks to all those who replied! The good news is that we can definitely work with what you have.</p>
+
+<p>What I’m asking of you this week is for some sample documents. Please don’t send me any sensitive stuff. I’m looking for documents you wish you’d had a tool to quickly parse and get meaningful information from. Some examples could be annual reports, government gazettes, court transcripts or dockets, or anything else that you’ve had to slog through for information on a story. There’s no limit to how short or long, the format, or how many individual docs. I’ll need to test for many different cases, so the more test documents I have, the better.</p>
+
+<p>Until next week,</p>]]></content><author><name></name></author><category term="Sourcery.info" /><category term="update" /><summary type="html"><![CDATA[It’s Monday, so time for an update on Sourcery.info. I didn’t get quite as much done as I was hoping since the last update, having gotten quite involved in the plumbing. Working out the little details, like what happens when you upload a two files with the same name, or how to ensure that we process everything in an orderly fashion with queues - it’s these problems that you don’t know to think about before you start building, and it’s what makes software development always so wildly inaccurate with its budgets and time measurements. You simply don’t know what you don’t know. (Until you smash your head against it in the dark.)]]></summary></entry><entry><title type="html">Breaking Ground</title><link href="http://localhost:4000/sourcery.info/update/2024/02/12/welcome-to-sourcery.html" rel="alternate" type="text/html" title="Breaking Ground" /><published>2024-02-12T16:33:00+01:00</published><updated>2024-02-12T16:33:00+01:00</updated><id>http://localhost:4000/sourcery.info/update/2024/02/12/welcome-to-sourcery</id><content type="html" xml:base="http://localhost:4000/sourcery.info/update/2024/02/12/welcome-to-sourcery.html"><![CDATA[<p>Hi all!</p>
+
+<p>Thanks for volunteering to be a part of Sourcery.info, the project that’ll make it safe to use AI with your documents. I typically work on Sourcery on Mondays, so from now on I’m going to write a short update on Mondays on how things are progressing, what help I need, and to solicit your feedback and opinions. It’ll also help keep me working at pace - I don’t want to get to the end of Monday and have nothing new to say!</p>
+
+<p>I’ve broken ground on development. I started with some mockups, and have now moved on to some simple user interfaces, as well as experimenting with AI models. As soon as I have a working prototype, I will get it into your hands to try! I’m hoping this’ll happen in the next six weeks.</p>
+
+<p>I’ve been running the AI models on my Macbook Pro M1 with 16GB of RAM, and the performance isn’t great, especially for a half-capable model like Llama2. It takes an age to index large documents, and the performance while chatting to them isn’t what I’d consider acceptable at this point.</p>
+
+<p>I do have a plan though - today I experimented with doing some of the heavy lifting on a cloud computer, and even on the lowest tier computer it was significantly faster. I’ve rearchitected Sourcery so that this is an option for you. If you’re dealing with less-sensitive documents, like court reports or government documents, use the cloud solution and save yourself a bunch of time and expense. It’ll still be relatively secure and significantly more private than the publicly available AI systems from OpenAI, Microsoft, Google etc.</p>
+
+<p>If you’re working on some kind of Snowden-leaks or Panama Papers, and everything needs to be super-secure, then you can still run everything securely and locally, but you might need to purchase a beefy machine for the task.</p>
+
+<p>The good news is that the cost of a very AI-capable machine is coming down quickly, and PCs are getting much faster at AI. I predict that by the end of this year, a new mid-tier machine will be quite able to run a decent model at an acceptable speed.</p>
+
+<p>In light of this, I have a few questions for you: 
+How much, if at all, do you deal with really sensitive documents?
+How much budget would you be able to allocate if you needed a seriously secure environment?
+What are the specs of your current every-day machine?</p>
+
+<p>Until next week Monday!</p>]]></content><author><name></name></author><category term="Sourcery.info" /><category term="update" /><summary type="html"><![CDATA[Hi all!]]></summary></entry></feed>

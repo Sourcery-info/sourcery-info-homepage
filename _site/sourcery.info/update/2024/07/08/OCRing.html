@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>A Long-Overdue Update | Sourcery.info</title>
+<meta name="generator" content="Jekyll v4.3.3" />
+<meta property="og:title" content="A Long-Overdue Update" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Hi all!" />
+<meta property="og:description" content="Hi all!" />
+<link rel="canonical" href="http://localhost:4000/sourcery.info/update/2024/07/08/OCRing.html" />
+<meta property="og:url" content="http://localhost:4000/sourcery.info/update/2024/07/08/OCRing.html" />
+<meta property="og:site_name" content="Sourcery.info" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-07-08T15:20:36+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="A Long-Overdue Update" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-07-08T15:20:36+02:00","datePublished":"2024-07-08T15:20:36+02:00","description":"Hi all!","headline":"A Long-Overdue Update","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/sourcery.info/update/2024/07/08/OCRing.html"},"url":"http://localhost:4000/sourcery.info/update/2024/07/08/OCRing.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Sourcery.info" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Sourcery.info</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">A Long-Overdue Update</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2024-07-08T15:20:36+02:00" itemprop="datePublished">Jul 8, 2024
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>Hi all!</p>
+
+<p>It’s been ages since my last update, and I apologise. I got busy with the South African elections, and haven’t quite recovered since then. But I have quietly been working on Sourcery.info, and I’ve vaulted a bunch of the little and large hurdles.</p>
+
+<p>My primary focus has been on finding a way to reliably deal with the most problematic of PDFs. <em>(Thanks K for providing some almost-impossible-to-grok specimens.)</em> The weeks’ worth of work dedicated to this pursuit is worth a whole blog post, but to quickly summarise: The most reliable method is to change the PDFs into images, then use AI to OCR them, and change it back into text.</p>
+
+<p>Finding the right software and models to achieve his has been time-consuming, and involved a lot of spreadsheets, tests and times, but I’ve honed in on trusty old ImageMagick to convert to image, and EasyOCR for the OCR part. There are some very promising new multimodal OCR models coming out that did very well in some of the tests, but EasyOCR is both light on resources and performs the best overall across a number of tricky documents.</p>
+
+<p>By far the best OCR today is Anthropic’s, but it requires uploading to the cloud, and I’m hearing reports that it’s starting to reject legally problematic documents, which rule it out for Sourcery.info’s use cases. If this isn’t an issue for you, I can recommend it.</p>
+
+<p>I’m running a simple chunking model for now, but it often misses what I’m asking it. I’m in the middle of a different chunking and vectorizing project on &gt;100,000 documents, and I’m learning from that experience, which I’ll bring into Sourcery.</p>
+
+<p>I’ve also bought a ~€1,200 PC to test Sourcery.info on for organisations that will have budget to dedicate to such a system. It performs brilliantly, and I can load much smarter models on it. I’m still determined to have Sourcery.info work okay on mid-range laptops, and really sing on dedicated (but still relatively cheap) hardware.</p>
+
+<p>The big jobs left are to implement the new OCR system, fix up the chunking method, and give the system memory of past conversations. The end is kinda in sight, if you squint a bit.</p>
+
+<p>I’ve also been considering how best to share all of this information, plus some blog posts on AI systems development in general. So I’ve started a blog! You can find it at <a href="https://sourcery.info/blog">https://sourcery.info/blog</a>. I’ll be posting updates there, and I’ll be sharing some of the more interesting documents that I’ve been working on.</p>
+
+<p>I’m also sorting out the final details for an email list, and I’ll send you invites to subscribe yourself soon.</p>
+
+<p>Of course I also need to get on top of the Slack channel and start pushing things out on LinkedIn too, but I tend to spend all my time doing development rather than admin at this point. But I will be better with updates, I promise!</p>
+
+  </div><a class="u-url" href="/sourcery.info/update/2024/07/08/OCRing.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Sourcery.info</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Sourcery.info</li><li><a class="u-email" href="mailto:jason@10layer.com">jason@10layer.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/j-norwood-young"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">j-norwood-young</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Sourcery.info lets investigative journalists interview their own documents securely and privately with the power of large language models.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

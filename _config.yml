@@ -22,7 +22,7 @@ title: Sourcery.info
 email: jason@10layer.com
 description: >- # this means to ignore newlines until "baseurl:"
     Sourcery.info lets investigative journalists interview their own documents securely and privately with the power of large language models.
-baseurl: "/blog" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://www.sourcery.info" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: jekyllrb
 github_username: j-norwood-young

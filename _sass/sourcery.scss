@@ -1,0 +1,22 @@
+#frontpage {
+    body {
+        background-color: black;
+        overflow: hidden;
+        background: linear-gradient(to bottom, rgba(111, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 100%);
+        color: white;
+    }
+
+    .center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    #logo {
+        max-height: 100vh;
+        max-width: 100vw;
+        opacity: 0.6;
+
+    }
+}
