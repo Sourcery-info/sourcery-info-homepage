@@ -767,6 +767,14 @@ video {
   max-width: 36rem;
 }
 
+.max-w-\[42rem\] {
+  max-width: 42rem;
+}
+
+.max-w-\[36rem\] {
+  max-width: 36rem;
+}
+
 .flex-auto {
   flex: 1 1 auto;
 }
@@ -1261,8 +1269,16 @@ video {
     flex: none;
   }
 
+  .lg\:flex-1 {
+    flex: 1 1 0%;
+  }
+
   .lg\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .lg\:self-center {
+    align-self: center;
   }
 
   .lg\:px-8 {
@@ -1277,6 +1293,10 @@ video {
 
   .lg\:pt-8 {
     padding-top: 2rem;
+  }
+
+  .lg\:pl-8 {
+    padding-left: 2rem;
   }
 
   .lg\:text-center {
