@@ -5,92 +5,102 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'sourcery-purple': {
+                            dark: '#0F0B1A',
+                            DEFAULT: '#1A1333',
+                            light: '#2D2150'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
 </head>
-<body class="bg-gray-900">
-    <main>
+<body class="bg-gradient-to-br from-sourcery-purple-dark via-sourcery-purple to-sourcery-purple-light min-h-screen">
+    <main class="min-h-screen py-20">
         <!-- Hero section -->
-        <div class="relative isolate overflow-hidden">
-            <svg class="absolute inset-0 -z-10 size-full stroke-white/10 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)] transform rotate-45" aria-hidden="true">
-                <defs>
-                    <pattern id="983e3e4c-de6d-4c3f-8d64-b9761d1534cc" width="200" height="200" x="50%" y="-1" patternUnits="userSpaceOnUse">
-                        <path d="M.5 200V.5H200" fill="none" />
-                    </pattern>
-                </defs>
-                <rect width="100%" height="100%" stroke-width="0" fill="url(#983e3e4c-de6d-4c3f-8d64-b9761d1534cc)" />
-            </svg>
-            <div class="mx-auto max-w-7xl px-6 pb-24 pt-10 sm:pb-32 lg:flex lg:px-8 lg:py-40">
-                <!-- Add mobile logo section -->
-                <div class="lg:hidden w-full mb-8">
-                    <div class="max-w-md mx-auto">
-                        <img src="img/sourcery.info.png" 
-                             alt="Sourcery.info" 
-                             class="w-full">
+        <div class="mx-auto max-w-4xl px-6">
+            <div class="rounded-2xl bg-sourcery-purple/80 ring-1 ring-white/10 backdrop-blur">
+                <div class="lg:grid lg:grid-cols-2 lg:gap-0">
+                    <!-- Left side - Why Sourcery -->
+                    <div class="p-8 lg:pl-14 pt-0 lg:border-r lg:border-white/10">
+                        <div class="w-[300px] mx-auto mb-4">
+                            <img src="img/sourcery.info.png" 
+                                 alt="Sourcery.info" 
+                                 class="w-full">
+                        </div>
+                        <h2 class="text-2xl text-indigo-400 font-semibold bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">Join the future of document analysis</h2>
+                        <p class="mt-6 text-base text-gray-300">Sourcery empowers journalists to unlock insights and tell compelling stories. Explore your document cache using natural language, all within a secure environment - perfect for investigative journalism and sensitive research.</p>
+                        <div class="mt-6 pl-4 border-l-2 border-indigo-500/30">
+                            <p class="text-sm text-gray-400">Powered by local AI processing for unprecedented security. No data ever leaves your system.</p>
+                        </div>
                     </div>
-                </div>
 
-                <div class="mx-auto max-w-2xl flex-shrink-0 lg:mx-0 lg:max-w-xl lg:pt-8">
-                    <div class="mt-16 sm:mt-24 lg:mt-16">
-                        <div class="inline-flex space-x-6">
-                            <div class="flex flex-col sm:flex-row sm:space-x-6 space-y-4 sm:space-y-0">
-                                <span class="rounded-full bg-indigo-500/10 px-3 py-1.5 text-base font-semibold text-indigo-400 ring-1 ring-inset ring-indigo-500/20">Coming Soon</span>
-                                <span class="inline-flex items-center space-x-2 text-base font-medium text-gray-300">
-                                    <span>Launching January 2025</span>
-                                    <svg class="h-5 w-5 text-gray-500" viewBox="0 0 20 20" fill="currentColor">
-                                        <path fill-rule="evenodd" d="M8.22 5.22a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06-1.06L11.94 10 8.22 6.28a.75.75 0 0 1 0-1.06Z" />
-                                    </svg>
-                                </span>
+                    <!-- Right side - Get Started -->
+                    <div class="p-8 lg:p-12 flex flex-col">
+                        <h2 class="text-2xl font-semibold text-white mb-6">Get Started</h2>
+                        
+                        <!-- Options -->
+                        <div class="space-y-4 flex-1">
+                            <a href="https://github.com/sourcery-info/sourcery-info" 
+                               class="block w-full rounded-lg bg-sourcery-purple-light p-4 text-left ring-1 ring-white/10 hover:ring-indigo-400/50 transition-all duration-200">
+                                <h3 class="text-lg font-semibold text-white">Self-Hosted Open Source</h3>
+                                <p class="mt-1 text-sm text-gray-300">Run it yourself with Docker. Perfect for technical users and organizations.</p>
+                            </a>
+                            
+                            <div class="block w-full rounded-lg bg-sourcery-purple-light/50 p-4 text-left ring-1 ring-white/10">
+                                <h3 class="text-lg font-semibold text-white">Desktop App</h3>
+                                <p class="mt-1 text-sm text-gray-300">Coming soon - Simple installation for non-technical users.</p>
+                            </div>
+
+                            <div class="block w-full rounded-lg bg-sourcery-purple-light/50 p-4 text-left ring-1 ring-white/10">
+                                <h3 class="text-lg font-semibold text-white">Hosted Version</h3>
+                                <p class="mt-1 text-sm text-gray-300">Coming soon - Cloud-hosted option at a reasonable price.</p>
+                            </div>
+                        </div>
+
+                        <!-- System Requirements -->
+                        <div class="mt-6 text-sm text-gray-400">
+                            <div class="flex items-center space-x-2">
+                                <span class="text-2xl font-semibold text-indigo-400">€</span>
+                                <span>Runs on any modern Macbook or PC ($1,200+)</span>
                             </div>
                         </div>
                     </div>
-                    <p class="mt-8 text-xl leading-8 text-gray-300">Empowering journalists to unlock insights and tell compelling stories.</p>
-                    <h1 class="mt-4 text-5xl font-bold tracking-tight text-white sm:text-6xl">"Interview" your source documents with complete privacy</h1>
-                    <p class="mt-6 text-xl leading-8 text-gray-300">Explore your document cache using natural language, all within a secure environment. Uncover connections and find answers to questions you didn't know to ask - without ever sending your data outside your system.</p>
-                    
-                    <!-- Beehiiv signup form -->
-                    <div class="mt-12">
-                        <iframe src="https://embeds.beehiiv.com/707f9e34-ca66-4a1f-bdd1-b8bbdc88db1a?slim=true" 
-                                data-test-id="beehiiv-embed" 
-                                height="52" 
-                                frameborder="0" 
-                                scrolling="no" 
-                                style="margin: 0; border-radius: 0px !important; background-color: transparent;"
-                                class="w-full max-w-md">
-                        </iframe>
-                    </div>
-                    <p class="mt-4 text-base leading-6 text-gray-300">Be among the first to experience Sourcery.info. Join the waiting list for early access.</p>
-                    
-                    <div class="mt-12 flex items-center justify-start space-x-4 rounded-lg bg-gray-800/50 p-8 backdrop-blur-sm ring-1 ring-white/10 hover:ring-indigo-400/50 transition-all duration-300">
-                        <div class="flex flex-col gap-2">
-                            <h3 class="text-lg font-semibold text-white">Want to find out more?</h3>
-                            <a href="mailto:jason@10layer.com?subject=Sourcery.info" 
-                               class="group inline-flex items-center text-sm font-medium text-indigo-400 hover:text-indigo-300">
-                                Get in touch with Jason
-                                <svg class="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" viewBox="0 0 20 20" fill="currentColor">
-                                    <path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clip-rule="evenodd" />
-                                </svg>
-                            </a>
+                </div>
+
+                <!-- Newsletter Signup -->
+                <div class="px-8 py-6 border-t border-white/10">
+                    <div class="max-w-3xl mx-auto flex flex-col sm:flex-row items-center gap-4">
+                        <div class="flex-1">
+                            <h3 class="text-sm font-semibold text-white">Join the mailing list</h3>
+                            <p class="mt-1 text-sm text-gray-400">Get updates and early access to Sourcery.info</p>
+                        </div>
+                        <div class="w-full sm:w-[400px]">
+                            <iframe src="https://embeds.beehiiv.com/707f9e34-ca66-4a1f-bdd1-b8bbdc88db1a?slim=true" 
+                                    data-test-id="beehiiv-embed" 
+                                    height="52" 
+                                    frameborder="0" 
+                                    scrolling="no" 
+                                    style="margin: 0; border-radius: 0px !important; background-color: transparent;"
+                                    class="w-full">
+                            </iframe>
                         </div>
                     </div>
                 </div>
-
-                <!-- Update desktop logo section -->
-                <div class="hidden lg:block mx-auto lg:flex-1 lg:pl-8 lg:self-center">
-                    <div class="relative w-full max-w-[36rem] mx-auto">
-                        <img src="img/sourcery.info.png" 
-                             alt="Sourcery.info" 
-                             class="w-full rounded-md bg-white/5 shadow-2xl ring-1 ring-white/10 transition-opacity hover:opacity-90">
-                    </div>
-                </div>
             </div>
-        </div>
 
-        <!-- Add countdown section before features -->
-        <div class="relative isolate -mt-20 px-6 lg:px-8">
-            <div class="mx-auto max-w-2xl text-center">
+            <!-- Badge -->
+            <div class="mt-8 flex justify-center">
                 <div class="inline-flex items-center rounded-full px-3 py-1 text-sm leading-6 text-gray-300 ring-1 ring-gray-700/10">
-                    <span class="font-semibold text-indigo-400">Launch countdown</span>
+                    <span class="font-semibold text-indigo-400">Open Source</span>
                     <svg viewBox="0 0 2 2" class="mx-2 inline h-0.5 w-0.5 fill-current" aria-hidden="true"><circle cx="1" cy="1" r="1" /></svg>
-                    <span id="countdown" class="font-mono">Coming January 2025</span>
+                    <span>Built by journalists, for journalists</span>
                 </div>
             </div>
         </div>
@@ -98,44 +108,81 @@
         <!-- Feature section -->
         <div class="mx-auto mt-16 max-w-7xl px-6 sm:mt-20 lg:px-8">
             <div class="mx-auto max-w-2xl lg:text-center">
-                <h2 class="text-lg font-semibold leading-7 text-indigo-400">Powered by RAG</h2>
-                <p class="mt-2 text-4xl font-bold tracking-tight text-white sm:text-4xl">Local AI with unprecedented security</p>
-                <p class="mt-6 text-xl leading-8 text-gray-300">Sourcery.info combines retrieval-augmented generation (RAG) with local processing to give you powerful document analysis without compromising security. Perfect for all journalists, especially those in investigative roles, OSInt researchers, and anyone working with sensitive documents.</p>
+                <h2 class="text-lg font-semibold leading-7 text-indigo-400">Built for Investigative Journalism</h2>
+                <p class="mt-2 text-4xl font-bold tracking-tight text-white sm:text-4xl">AI that protects your sources</p>
+                <p class="mt-6 text-lg leading-8 text-gray-300">Sourcery.info is designed specifically for journalists who need to analyze sensitive documents while maintaining absolute privacy. No cloud services, no data sharing, no compromises.</p>
             </div>
             <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
                 <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-12 lg:max-w-none lg:grid-cols-3">
-                    <div class="flex flex-col">
+                    <div class="flex flex-col rounded-2xl bg-sourcery-purple p-6 ring-1 ring-white/10 hover:ring-indigo-400/50 transition-all duration-200">
                         <dt class="flex items-center gap-x-3 text-lg font-semibold text-white">
                             <svg class="h-5 w-5 flex-none text-indigo-400" viewBox="0 0 20 20" fill="currentColor">
                                 <path fill-rule="evenodd" d="M10 1a4.5 4.5 0 00-4.5 4.5V9H5a2 2 0 00-2 2v6a2 2 0 002 2h10a2 2 0 002-2v-6a2 2 0 00-2-2h-.5V5.5A4.5 4.5 0 0010 1zm3 8V5.5a3 3 0 10-6 0V9h6z" clip-rule="evenodd" />
                             </svg>
-                            Absolute Privacy
+                            Complete Privacy
                         </dt>
-                        <dd class="mt-4 flex flex-auto flex-col text-lg text-gray-300">
-                            <p class="flex-auto">Run everything locally - from OCR to embeddings to queries. No data ever leaves your system. Works in air-gapped environments.</p>
+                        <dd class="mt-4 flex flex-auto flex-col text-base text-gray-300">
+                            <p class="flex-auto">Everything runs locally on your machine or network. No data ever leaves your control, making it perfect for air-gapped environments and sensitive investigations.</p>
                         </dd>
                     </div>
-                    <div class="flex flex-col">
+                    <div class="flex flex-col rounded-2xl bg-sourcery-purple p-6 ring-1 ring-white/10 hover:ring-indigo-400/50 transition-all duration-200">
                         <dt class="flex items-center gap-x-3 text-lg font-semibold text-white">
                             <svg class="h-5 w-5 flex-none text-indigo-400" viewBox="0 0 20 20" fill="currentColor">
                                 <path d="M10 12.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5z" />
                                 <path fill-rule="evenodd" d="M.664 10.59a1.651 1.651 0 010-1.186A10.004 10.004 0 0110 3c4.257 0 7.893 2.66 9.336 6.41.147.381.146.804 0 1.186A10.004 10.004 0 0110 17c-4.257 0-7.893-2.66-9.336-6.41zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd" />
                             </svg>
-                            Intelligent Discovery
+                            Smart Document Analysis
                         </dt>
-                        <dd class="mt-4 flex flex-auto flex-col text-lg text-gray-300">
-                            <p class="flex-auto">Surface unexpected connections and insights. Find answers to questions you didn't know to ask using natural language queries.</p>
+                        <dd class="mt-4 flex flex-auto flex-col text-base text-gray-300">
+                            <p class="flex-auto">Automatically identify people, organizations, and relationships in your documents. Build dossiers and track connections across your entire document collection.</p>
                         </dd>
                     </div>
-                    <div class="flex flex-col">
+                    <div class="flex flex-col rounded-2xl bg-sourcery-purple p-6 ring-1 ring-white/10 hover:ring-indigo-400/50 transition-all duration-200">
                         <dt class="flex items-center gap-x-3 text-lg font-semibold text-white">
                             <svg class="h-5 w-5 flex-none text-indigo-400" viewBox="0 0 20 20" fill="currentColor">
                                 <path fill-rule="evenodd" d="M15.312 11.424a5.5 5.5 0 01-9.201 2.466l-.312-.311h2.433a.75.75 0 000-1.5H3.989a.75.75 0 00-.75.75v4.242a.75.75 0 001.5 0v-2.43l.31.31a7 7 0 0011.712-3.138.75.75 0 00-1.449-.39zm1.23-3.723a.75.75 0 00.219-.53V2.929a.75.75 0 00-1.5 0V5.36l-.31-.31A7 7 0 003.239 8.188a.75.75 0 101.448.389A5.5 5.5 0 0113.89 6.11l.311.31h-2.432a.75.75 0 000 1.5h4.243a.75.75 0 00.53-.219z" clip-rule="evenodd" />
                             </svg>
-                            Optimized RAG
+                            Journalist-First Design
                         </dt>
-                        <dd class="mt-4 flex flex-auto flex-col text-lg text-gray-300">
-                            <p class="flex-auto">Automatically optimizes embeddings, chunk sizes, and model selection. Powerful capabilities with a simple interface.</p>
+                        <dd class="mt-4 flex flex-auto flex-col text-base text-gray-300">
+                            <p class="flex-auto">Built with input from investigative journalists worldwide. Handles messy documents, supports multiple formats, and focuses on the real needs of newsrooms.</p>
+                        </dd>
+                    </div>
+                </dl>
+            </div>
+        </div>
+
+        <!-- Roadmap section -->
+        <div class="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
+            <div class="mx-auto max-w-2xl lg:text-center">
+                <h2 class="text-lg font-semibold leading-7 text-indigo-400">Roadmap</h2>
+                <p class="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">Coming Soon</p>
+                <p class="mt-6 text-lg leading-8 text-gray-300">We're working on making Sourcery even more accessible and powerful.</p>
+            </div>
+            <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
+                <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
+                    <div class="flex flex-col rounded-2xl bg-sourcery-purple/50 p-6 ring-1 ring-white/10">
+                        <dt class="flex items-center gap-x-3 text-base font-semibold leading-7 text-white">
+                            Desktop App
+                        </dt>
+                        <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-300">
+                            <p class="flex-auto">Simple installation for non-technical users - just download and start analyzing.</p>
+                        </dd>
+                    </div>
+                    <div class="flex flex-col rounded-2xl bg-sourcery-purple/50 p-6 ring-1 ring-white/10">
+                        <dt class="flex items-center gap-x-3 text-base font-semibold leading-7 text-white">
+                            Hosted Version
+                        </dt>
+                        <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-300">
+                            <p class="flex-auto">Cloud-hosted option at a reasonable price for those who prefer managed infrastructure.</p>
+                        </dd>
+                    </div>
+                    <div class="flex flex-col rounded-2xl bg-sourcery-purple/50 p-6 ring-1 ring-white/10">
+                        <dt class="flex items-center gap-x-3 text-base font-semibold leading-7 text-white">
+                            Network Appliance
+                        </dt>
+                        <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-300">
+                            <p class="flex-auto">Drop-in solution for organizations, perfect for airgapped environments.</p>
                         </dd>
                     </div>
                 </dl>
@@ -144,14 +191,25 @@
     </main>
 
     <footer class="mt-24 border-t border-white/10 py-8 sm:py-12">
-        <div class="mx-auto max-w-7xl px-6 md:flex md:items-center md:justify-between lg:px-8">
-            <!-- <div class="flex justify-center space-x-6 md:order-2">
-                <a href="#" class="text-gray-400 hover:text-gray-300">
-                    <span class="sr-only">GitHub</span>
-                    <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"/></svg>
-                </a>
-            </div> -->
-            <p class="mt-8 text-center text-sm text-gray-400 md:order-1 md:mt-0">&copy; 2024 Jason Norwood-Young. All rights reserved.</p>
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+            <div class="flex flex-col space-y-8 lg:flex-row lg:items-center lg:justify-between lg:space-y-0">
+                <div class="flex flex-col space-y-4 max-w-xl">
+                    <p class="text-sm text-gray-400">Created by Jason Norwood-Young, a journalist-turned-coder with 30 years of media experience. This is a passion project to support investigative journalism in the age of AI.</p>
+                    <div class="flex items-center space-x-4">
+                        <a href="mailto:jason@10layer.com" class="text-sm text-indigo-400 hover:text-indigo-300 transition-colors duration-200">jason@10layer.com</a>
+                        <span class="text-sm text-gray-500">|</span>
+                        <a href="https://github.com/sourcery-info/sourcery-info" class="text-sm text-indigo-400 hover:text-indigo-300 transition-colors duration-200">GitHub</a>
+                    </div>
+                </div>
+                <div class="flex flex-col items-end space-y-4">
+                    <div class="w-24">
+                        <img src="img/sourcery.info.png" 
+                             alt="Sourcery.info" 
+                             class="w-full opacity-30">
+                    </div>
+                    <p class="text-sm text-gray-400">&copy; 2024 Jason Norwood-Young</p>
+                </div>
+            </div>
         </div>
     </footer>
 </body>
